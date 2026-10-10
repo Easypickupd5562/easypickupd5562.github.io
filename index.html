@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ming Zhao · Vita</title>
+  <style>
+    :root {
+      --text: #2d2d2d;
+      --muted: #6b6b6b;
+      --line: #e6e6e6;
+      --link: #2a7ae2;
+      --bg: #fff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .masthead {
+      border-bottom: 1px solid var(--line);
+      padding: 0.85rem 1.5rem;
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(6px);
+      z-index: 10;
+    }
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      gap: 1.35rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav .title {
+      font-weight: 700;
+      color: var(--text);
+      margin-right: auto;
+      font-size: 1.15rem;
+    }
+    .nav a.nav-item {
+      color: var(--muted);
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+      padding: 0.2rem 0;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .nav a.nav-item:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav a.nav-item.active {
+      color: var(--text);
+      font-weight: 600;
+      border-bottom-color: var(--text);
+    }
+    .layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 3rem;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+    .sidebar { position: sticky; top: 4.5rem; align-self: start; }
+    .avatar {
+      width: 148px; height: 148px; border-radius: 50%;
+      background: linear-gradient(135deg, #dfe7f3, #f0f0f0);
+      display: grid; place-items: center; color: var(--muted);
+      font-size: 0.85rem; border: 1px solid var(--line);
+    }
+    .author-name { margin: 1rem 0 0.25rem; font-size: 1.2rem; font-weight: 700; }
+    .author-bio { margin: 0 0 1rem; color: var(--muted); font-size: 0.95rem; }
+    .meta { list-style: none; padding: 0; margin: 0; font-size: 0.92rem; }
+    .meta li { margin: 0.4rem 0; color: var(--muted); }
+    .content h1 {
+      font-size: 1.7rem;
+      margin: 0 0 1rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .content p { margin: 0 0 1rem; max-width: 34rem; }
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 1.25rem 1.5rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+    @media (max-width: 800px) {
+      .layout { grid-template-columns: 1fr; gap: 1.5rem; }
+      .sidebar { position: static; display: flex; gap: 1rem; align-items: center; }
+      .avatar { width: 88px; height: 88px; flex-shrink: 0; }
+      .sidebar-text { flex: 1; }
+      .author-name { margin-top: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <nav class="nav">
+      <a class="title" href="./">Ming Zhao</a>
+      <a class="nav-item" href="./opera.html">Opera</a>
+      <a class="nav-item" href="./eureka.html">Eureka</a>
+      <a class="nav-item active" href="./">Vita</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="avatar">photo</div>
+      <div class="sidebar-text">
+        <h3 class="author-name">Ming Zhao</h3>
+        <p class="author-bio">Researcher (placeholder title)</p>
+        <ul class="meta">
+          <li>City (to fill)</li>
+          <li><a href="mailto:">Email</a></li>
+          <li><a href="#">Google Scholar</a></li>
+          <li><a href="#">GitHub</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="content">
+      <h1>Vita</h1>
+      <p>I research <strong>topic A</strong> and <strong>topic B</strong> at <strong>Institution</strong>.</p>
+      <p>I studied at <strong>University</strong>, where I worked on …</p>
+    </main>
+  </div>
+
+  <footer class="footer">© Ming Zhao</footer>
+</body>
+</html>
